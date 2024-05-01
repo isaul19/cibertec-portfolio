@@ -1,0 +1,22 @@
+/*  
+============= IMPORT DEPENDENCIES ==================================
+*/
+
+@import url("/css/_common/global.css");
+
+/*
+============= COMPONENT STYLES ==================================
+*/
+
+.wc-navigation {
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+  }
+
+  .items {
+    display: flex;
+    gap: 8.4rem;
+  }
+}

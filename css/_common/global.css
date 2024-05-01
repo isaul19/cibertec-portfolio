@@ -1,0 +1,81 @@
+/*  
+============= IMPORT GLOBAL DEPENDENCIES ==================================
+*/
+
+@import url("./fonts.css");
+@import url("./variables.css");
+@import url("./normalize.css");
+
+/*  
+============= GLOBAL STYLES ==================================
+*/
+
+html {
+  background-color: var(--color-black);
+}
+
+body {
+  color: var(--color-white);
+  font-family: var(--font-body);
+  font-size: 1.6rem;
+  font-weight: 500;
+  position: relative;
+}
+
+.container {
+  max-width: 144rem;
+  width: 95%;
+  margin: 0 auto;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  font-family: var(--font-heading);
+  font-weight: 500;
+}
+
+h1,
+.h1 {
+  font-size: 9rem;
+  line-height: 9.6rem;
+}
+
+h2,
+.h2 {
+  font-size: 6.7rem;
+  line-height: 8.8rem;
+}
+
+h3,
+.h3 {
+  font-size: 5rem;
+  line-height: 6.4rem;
+}
+
+h4,
+.h4 {
+  font-size: 3.8rem;
+  line-height: 4.8rem;
+}
+
+h5,
+.h5 {
+  font-size: 2.8rem;
+  line-height: 4rem;
+}
+
+h6,
+.h6 {
+  font-size: 2.1rem;
+  line-height: 3.2rem;
+}
