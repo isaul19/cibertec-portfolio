@@ -9,6 +9,20 @@
 */
 
 .wc-navigation {
+  border-bottom: 0.2rem solid var(--color-black-light);
+
+  .logo {
+    background: linear-gradient(
+      94deg,
+      var(--color-pink) 0%,
+      var(--color-white) 36.84%,
+      var(--color-blue-light) 99.99%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
   .nav {
     display: flex;
     justify-content: space-between;
@@ -18,5 +32,22 @@
   .items {
     display: flex;
     gap: 8.4rem;
+  }
+
+  .item {
+    position: relative;
+  }
+
+  .item:not(:last-child):before {
+    content: "";
+    display: block;
+    position: absolute;
+    right: -4.2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 999px;
+    background-color: var(--color-white);
   }
 }

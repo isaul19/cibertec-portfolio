@@ -39,7 +39,7 @@ export class Navigation extends HTMLElement {
                 <li class="item">
                   <a class="link h6" href="${route.href}">${route.text}</a>
                 </li>
-                `
+                `,
             )
             .join("")}
         </ul>
