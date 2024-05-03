@@ -3,11 +3,75 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>iSaul19 - Inicio</title>
     <link rel="stylesheet" href="/css/pages/index.css" />
+    <script type="module" src="/js/components/index.js"></script>
   </head>
   <body>
     <wc-navigation></wc-navigation>
-    <script type="module" src="/js/components/index.js"></script>
+    <main class="hero-section container container--mt">
+      <div class="hero-section__image-box">
+        <img src="/assets/media/images/index/photo.jpeg" alt="saul-porras" />
+      </div>
+      <div class="hero-section__text-box">
+        <p class="hero-section__name">SAUL PORRAS</p>
+        <h1 class="hero-section__title">
+          Soy un
+          <span class="hero-section__title--rainbow"> Frontend Developer</span>
+          Apasionado
+        </h1>
+        <p class="hero-section__description">
+          Me gusta la tecnología y disfruto construyendo interfaces que combinan creatividad y
+          funcionalidad para brindar la mejor experiencia de usuario posible.
+        </p>
+        <div class="hero-section__button-container">
+          <wc-button id="btn-download-cv">Descargar mi CV</wc-button>
+        </div>
+      </div>
+      <div class="hero-section__info-box">
+        <div class="hero-section__card">
+          <div>
+            <span class="h4">1,5K</span>
+            <span class="card__text">Clientes Felices</span>
+          </div>
+          <div class="clients-images">
+            <img src="/assets/media/images/index/customer-1.jpg" alt="Customer photo" />
+            <img src="/assets/media/images/index/customer-2.jpg" alt="Customer photo" />
+            <img src="/assets/media/images/index/customer-3.jpg" alt="Customer photo" />
+          </div>
+        </div>
+        <div class="hero-section__card">
+          <div>
+            <img
+              class="hero-section__card-icon"
+              src="/assets/media/icons/index/shield.png"
+              alt="shield-icon"
+            />
+            <div>
+              <span class="h5">100%</span>
+              <span class="card__text">Garantía</span>
+            </div>
+          </div>
+          <div>
+            <img
+              class="hero-section__card-icon"
+              src="/assets/media/icons/index/start.png"
+              alt="start-icon"
+            />
+            <div>
+              <span class="h5">98%</span>
+              <span class="card__text">Satisfechos</span>
+            </div>
+          </div>
+        </div>
+        <div class="hero-section__card">
+          <div>
+            <span class="h4">990+</span>
+            <span class="card__text">Proyectos Terminados</span>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script defer type="module" src="/js/pages/index.js"></script>
   </body>
 </html>

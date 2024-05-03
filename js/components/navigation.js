@@ -13,15 +13,15 @@ export class Navigation extends HTMLElement {
       text: "Inicio",
     },
     {
-      href: "#about",
+      href: "/about.html",
       text: "Sobre mi",
     },
     {
-      href: "#project",
+      href: "/projects.html",
       text: "Proyectos",
     },
     {
-      href: "#contact",
+      href: "/contact.html",
       text: "Contacto",
     },
   ];

@@ -28,6 +28,10 @@ body {
   margin: 0 auto;
 }
 
+.container--mt {
+  margin-top: 6.6rem;
+}
+
 h1,
 .h1,
 h2,

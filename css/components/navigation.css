@@ -12,12 +12,7 @@
   border-bottom: 0.2rem solid var(--color-black-light);
 
   .logo {
-    background: linear-gradient(
-      94deg,
-      var(--color-pink) 0%,
-      var(--color-white) 36.84%,
-      var(--color-blue-light) 99.99%
-    );
+    background: linear-gradient(94deg, var(--color-green) 0%, var(--color-green-light) 99.99%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
