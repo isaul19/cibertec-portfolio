@@ -46,6 +46,11 @@ body {
   margin-top: 6.6rem;
 }
 
+.rainbow {
+  display: block;
+  color: var(--color-green);
+}
+
 h1,
 .h1,
 h2,

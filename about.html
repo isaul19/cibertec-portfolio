@@ -3,12 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>iSaul19 - Sobre mi</title>
+    <title>iSaul19 - Sobre mí</title>
     <link rel="stylesheet" href="/css/pages/about.css" />
-    <script type="module" src="/js/components/index.js"></script>
+    <script type="module" src="/js/components/module-components.js"></script>
   </head>
   <body>
     <wc-navigation></wc-navigation>
-    <h1>About</h1>
+    <main class="presentation-section container container--mt">
+      <div class="about-me">
+        <h2 class="about-me__title rainbow">Sobre mí</h2>
+        <p class="about-me__description">
+          El primer contacto que tuve con la informática comenzó en abril de 2022 cuando empecé a
+          ver publicidad de servicios de páginas web. Me dio curiosidad y comencé a investigar sobre
+          cómo crear páginas web. Así fue como encontré un video en YouTube donde hice mi primer
+          "Hola Mundo" en HTML. Después de unos meses de estudio, conseguí trabajo. Actualmente
+          llevo 1 año y 3 meses trabajando en una empresa de consultoría en tecnologías de la
+          información como desarrollador web
+        </p>
+        <ul class="about-me__skills">
+          <p class="rainbow">Mis Skills:</p>
+          <li class="about-me__skill">Conocimientos en DevOps</li>
+          <li class="about-me__skill">Conocimientos en Python</li>
+          <li class="about-me__skill">Experiencia con Express y MySQL</li>
+          <li class="about-me__skill">Experiencia en AWS</li>
+          <li class="about-me__skill">Fuerte dominio de React</li>
+        </ul>
+      </div>
+      <div class="orbit-container">
+        <wc-orbit class="presentation-section__orbit"></wc-orbit>
+      </div>
+    </main>
   </body>
 </html>

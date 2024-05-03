@@ -73,16 +73,12 @@
   margin-top: 1rem;
 }
 
-.hero-section__title--rainbow {
-  display: block;
-  color: var(--color-green);
-}
-
 .hero-section__description {
   margin-top: 2.4rem;
   font-size: 1.6rem;
   max-width: 64rem;
 }
+
 .hero-section__button-container {
   margin-top: 5.6rem;
 }
