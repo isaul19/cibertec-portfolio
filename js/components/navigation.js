@@ -1,9 +1,11 @@
 export class Navigation extends HTMLElement {
   static name = "wc-navigation";
+  #currentPath = "";
 
   constructor() {
     super();
     this.attachShadow({ mode: "open" });
+    this.#currentPath = window.location.pathname;
     this.#render();
   }
 
@@ -35,9 +37,11 @@ export class Navigation extends HTMLElement {
         <ul class="items">
           ${this.#routes
             .map(
-              (route) => /*html*/ `
+              ({ text, href }) => /*html*/ `
                 <li class="item">
-                  <a class="link h6" href="${route.href}">${route.text}</a>
+                  <a class="link h6 ${
+                    href === this.#currentPath ? "active" : ""
+                  }" href="${href}">${text}</a>
                 </li>
                 `,
             )

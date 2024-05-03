@@ -33,6 +33,14 @@
     position: relative;
   }
 
+  .link:hover {
+    opacity: 0.6;
+  }
+
+  .link.active {
+    color: var(--color-green);
+  }
+
   .item:not(:last-child):before {
     content: "";
     display: block;
