@@ -97,9 +97,24 @@
   gap: 1.2rem;
 }
 
+.hero-section__card-icon-container {
+  position: relative;
+}
+
+.hero-section__card-icon-container::before {
+  content: ""; /* Asegúrate de definir content */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4.4rem;
+  height: 4.4rem;
+  background-image: url("/assets/media/icons/index/border-green.svg");
+}
+
 .hero-section__card-icon {
-  box-shadow: 0 0 0 0.1rem var(--color-white);
   padding: 1rem;
+  width: 4.4rem;
+  height: 4.4rem;
   border-radius: 999px;
 }
 
@@ -112,7 +127,7 @@
   width: 3.8rem;
   border-radius: 50%;
   margin-right: -1.6rem;
-  border: 2px solid #fdf2e9;
+  box-shadow: 0 0 0 0.2rem var(--color-white);
 }
 
 .clients-images img:last-child {
