@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>iSaul19 - Contacto</title>
     <link rel="stylesheet" href="/css/pages/contact.css" />
-    <script type="module" src="/js/components/module-components.js"></script>
   </head>
   <body>
     <wc-navigation></wc-navigation>
@@ -38,18 +37,30 @@
                   class="app-form"
                   action="https://formsubmit.co/porrasemiliosaul@gmail.com"
                   method="POST"
+                  id="form"
                 >
                   <div class="app-form-group">
-                    <input class="app-form-control" name="nombre" placeholder="Nombre" />
+                    <input class="app-form-control" name="nombre" placeholder="Nombre" required />
                   </div>
                   <div class="app-form-group">
-                    <input class="app-form-control" name="correo" placeholder="Correo" />
+                    <input
+                      type="email"
+                      class="app-form-control"
+                      name="correo"
+                      placeholder="Correo"
+                      required
+                    />
                   </div>
                   <div class="app-form-group">
-                    <input class="app-form-control" name="celular" placeholder="Teléfono" />
+                    <input
+                      class="app-form-control"
+                      name="celular"
+                      placeholder="Teléfono"
+                      required
+                    />
                   </div>
                   <div class="app-form-group message">
-                    <input class="app-form-control" name="mensaje" placeholder="Mensaje" />
+                    <input class="app-form-control" name="mensaje" placeholder="Mensaje" required />
                   </div>
                   <div class="app-form-group buttons">
                     <button class="app-form-button">Cancelar</button>
@@ -62,5 +73,7 @@
         </div>
       </div>
     </main>
+    <script type="module" src="/js/components/navigation.js"></script>
+    <script defer src="/js/pages/contact.js"></script>
   </body>
 </html>
