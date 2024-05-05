@@ -23,8 +23,8 @@ function handleSubmitForm() {
 
   alert.success("En unos segundos sera' redirigido");
   setTimeout(() => {
-    clearForm();
     document.getElementById("form").submit();
+    clearForm();
   }, 2000);
 }
 
