@@ -18,7 +18,7 @@ class Alert extends HTMLElement {
 
   error(message) {
     this.#hide();
-    clearTimeout(this.timer); // Reinicia el temporizador si ya hay una alerta visible
+    clearTimeout(this.timer);
     this.wcAlertElement.classList.remove("success");
     this.wcAlertElement.classList.add("error");
     this.imageBoxElement.style.backgroundColor = "#dc2626";
@@ -43,7 +43,7 @@ class Alert extends HTMLElement {
 
   success(message) {
     this.#hide();
-    clearTimeout(this.timer); // Reinicia el temporizador si ya hay una alerta visible
+    clearTimeout(this.timer);
     this.wcAlertElement.classList.remove("error");
     this.wcAlertElement.classList.add("success");
     this.imageBoxElement.style.backgroundColor = "#10b981";

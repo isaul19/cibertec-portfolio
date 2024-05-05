@@ -1,12 +1,17 @@
 import { downloadPdf } from "../use-cases/download-pdf.js";
 
-const btnDownloadCv = document.querySelector("#btn-download-cv");
+function main() {
+  const btnDownloadCv = document.querySelector("#btn-download-cv");
+  btnDownloadCv.addEventListener("click", handleDownloadCv);
+}
 
-btnDownloadCv.addEventListener("click", () => {
+main();
+
+function handleDownloadCv() {
   console.log("DESCARGANDO PDF...");
 
   downloadPdf({
     filePath: "/assets/documents/cv-test.pdf",
     downloadName: "cv-saul-porras.pdf",
   });
-});
+}
