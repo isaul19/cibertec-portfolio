@@ -1,0 +1,64 @@
+/*  
+============= IMPORT DEPENDENCIES ==================================
+*/
+
+@import url("/css/_common/global.css");
+
+/*
+============= COMPONENT STYLES ==================================
+*/
+
+.wc-alert {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-top: 2rem;
+  margin-right: 2rem;
+  opacity: 0;
+  height: 0;
+  padding: 1rem;
+  font-size: 0.875rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 1.5rem;
+}
+
+.main-container {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  justify-content: center;
+  padding: 0.5rem 2rem;
+}
+
+.success {
+  color: #065f46;
+  background-color: #d1fae5;
+  border: 1px solid #10b981;
+}
+
+.error {
+  color: #9e0b0f;
+  background-color: #fde2e2;
+  border: 1px solid #dc2626;
+}
+
+.image-box {
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #dc2626;
+}
+
+.text-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.title-alert {
+  font-weight: bold;
+}

@@ -40,31 +40,41 @@
                   id="form"
                 >
                   <div class="app-form-group">
-                    <input class="app-form-control" name="nombre" placeholder="Nombre" required />
+                    <input
+                      class="app-form-control"
+                      id="nombre"
+                      name="nombre"
+                      placeholder="Nombre"
+                    />
                   </div>
                   <div class="app-form-group">
                     <input
                       type="email"
                       class="app-form-control"
+                      id="correo"
                       name="correo"
                       placeholder="Correo"
-                      required
                     />
                   </div>
                   <div class="app-form-group">
                     <input
                       class="app-form-control"
+                      id="celular"
                       name="celular"
                       placeholder="Teléfono"
-                      required
                     />
                   </div>
                   <div class="app-form-group message">
-                    <input class="app-form-control" name="mensaje" placeholder="Mensaje" required />
+                    <input
+                      class="app-form-control"
+                      id="mensaje"
+                      name="mensaje"
+                      placeholder="Mensaje"
+                    />
                   </div>
                   <div class="app-form-group buttons">
                     <button class="app-form-button">Cancelar</button>
-                    <button class="app-form-button">Enviar</button>
+                    <button type="button" id="btn-enviar" class="app-form-button">Enviar</button>
                   </div>
                 </form>
               </div>
@@ -73,7 +83,9 @@
         </div>
       </div>
     </main>
+    <wc-alert id="contact-alert"></wc-alert>
     <script type="module" src="/js/components/navigation.js"></script>
+    <script type="module" src="/js/components/alert.js"></script>
     <script defer src="/js/pages/contact.js"></script>
   </body>
 </html>
