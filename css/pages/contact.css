@@ -10,7 +10,6 @@
 
 .background {
   display: flex;
-  transform: scale(1.2);
 }
 
 .screen {
@@ -167,6 +166,11 @@
   cursor: pointer;
   transition: all 0.3s ease;
   outline: none;
+}
+
+.buttons button:first-of-type {
+  background-color: transparent;
+  color: var(--color-white);
 }
 
 .app-form-button:hover {
