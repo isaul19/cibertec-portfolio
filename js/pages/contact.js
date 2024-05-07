@@ -1,3 +1,5 @@
+import { isEmpty, isValidEmail } from "../utils/validate.js";
+
 function main() {
   const btnEnviar = document.getElementById("btn-enviar");
   btnEnviar.addEventListener("click", handleSubmitForm);
@@ -13,28 +15,19 @@ function handleSubmitForm() {
 
   const txtEmail = document.getElementById("correo");
   if (isEmpty(txtEmail.value)) return alert.error("El correo es requerido");
-  if (!isValidEmail(txtEmail.value)) return alert.error("El correo no es valido");
+  if (!isValidEmail(txtEmail.value)) return alert.error("El correo no es válido");
 
   const txtTelefono = document.getElementById("celular");
-  if (isEmpty(txtTelefono.value)) return alert.error("El telefono es requerido");
+  if (isEmpty(txtTelefono.value)) return alert.error("El teléfono es requerido");
 
   const txtMensaje = document.getElementById("mensaje");
   if (isEmpty(txtMensaje.value)) return alert.error("El mensaje es requerido");
 
-  alert.success("En unos segundos sera' redirigido");
+  alert.success("En unos segundos será redirigido.");
   setTimeout(() => {
     document.getElementById("form").submit();
     clearForm();
   }, 2000);
-}
-
-function isEmpty(value) {
-  return value.trim().length === 0;
-}
-
-function isValidEmail(email) {
-  const emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
-  return emailRegex.test(email);
 }
 
 function clearForm() {
