@@ -27,7 +27,7 @@ function handleSubmitForm() {
   setTimeout(() => {
     document.getElementById("form").submit();
     clearForm();
-  }, 2000);
+  }, 3000);
 }
 
 function clearForm() {
