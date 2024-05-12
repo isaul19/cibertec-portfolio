@@ -1,23 +1,37 @@
+import { useState } from "react";
 import { toast } from "react-toastify";
+
 import { Navigation } from "../components/Navigation";
 import { isEmpty, isValidEmail } from "../utils/validate.js";
 
+const initialState = {
+  nombre: "",
+  correo: "",
+  celular: "",
+  mensaje: "",
+};
+
 export const ContactPage = () => {
-  const handleSubmitForm = (e) => {
+  const [form, setForm] = useState(initialState);
+
+  const onChangeInput = (e) => {
+    setForm((prevState) => ({
+      ...prevState,
+      [e.target.name]: e.target.value,
+    }));
+  };
+
+  const onClickSend = (e) => {
     e.preventDefault();
 
-    const txtNombre = document.getElementById("nombre");
-    if (isEmpty(txtNombre.value)) return toast.error("El nombre es requerido");
+    if (isEmpty(form.nombre)) return toast.error("El nombre es requerido");
 
-    const txtEmail = document.getElementById("correo");
-    if (isEmpty(txtEmail.value)) return toast.error("El correo es requerido");
-    if (!isValidEmail(txtEmail.value)) return toast.error("El correo no es válido");
+    if (isEmpty(form.correo)) return toast.error("El correo es requerido");
+    if (!isValidEmail(form.correo)) return toast.error("El correo no es válido");
 
-    const txtTelefono = document.getElementById("celular");
-    if (isEmpty(txtTelefono.value)) return toast.error("El teléfono es requerido");
+    if (isEmpty(form.celular)) return toast.error("El teléfono es requerido");
 
-    const txtMensaje = document.getElementById("mensaje");
-    if (isEmpty(txtMensaje.value)) return toast.error("El mensaje es requerido");
+    if (isEmpty(form.mensaje)) return toast.error("El mensaje es requerido");
 
     toast.success("En unos segundos será redirigido.");
     setTimeout(() => {
@@ -27,17 +41,12 @@ export const ContactPage = () => {
   };
 
   function clearForm() {
-    const txtNombre = document.getElementById("nombre");
-    txtNombre.value = "";
-
-    const txtEmail = document.getElementById("correo");
-    txtEmail.value = "";
-
-    const txtTelefono = document.getElementById("celular");
-    txtTelefono.value = "";
-
-    const txtMensaje = document.getElementById("mensaje");
-    txtMensaje.value = "";
+    setForm({
+      nombre: "",
+      correo: "",
+      celular: "",
+      mensaje: "",
+    });
   }
 
   return (
@@ -73,7 +82,6 @@ export const ContactPage = () => {
                     action="https://formsubmit.co/porrasemiliosaul@gmail.com"
                     method="POST"
                     id="form"
-                    onSubmit={handleSubmitForm}
                   >
                     <div className="app-form-group">
                       <input
@@ -81,6 +89,8 @@ export const ContactPage = () => {
                         id="nombre"
                         name="nombre"
                         placeholder="Nombre"
+                        value={form.nombre}
+                        onChange={onChangeInput}
                       />
                     </div>
                     <div className="app-form-group">
@@ -89,6 +99,8 @@ export const ContactPage = () => {
                         id="correo"
                         name="correo"
                         placeholder="Correo"
+                        value={form.correo}
+                        onChange={onChangeInput}
                       />
                     </div>
                     <div className="app-form-group">
@@ -97,6 +109,8 @@ export const ContactPage = () => {
                         id="celular"
                         name="celular"
                         placeholder="Teléfono"
+                        value={form.celular}
+                        onChange={onChangeInput}
                       />
                     </div>
                     <div className="app-form-group message">
@@ -105,13 +119,20 @@ export const ContactPage = () => {
                         id="mensaje"
                         name="mensaje"
                         placeholder="Mensaje"
+                        value={form.mensaje}
+                        onChange={onChangeInput}
                       />
                     </div>
                     <div className="app-form-group buttons">
                       <button type="reset" className="app-form-button">
                         Cancelar
                       </button>
-                      <button type="submit" id="btn-enviar" className="app-form-button">
+                      <button
+                        type="submit"
+                        id="btn-enviar"
+                        className="app-form-button"
+                        onClick={onClickSend}
+                      >
                         Enviar
                       </button>
                     </div>
