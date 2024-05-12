@@ -1,0 +1,43 @@
+/*
+============= COMPONENT STYLES ==================================
+*/
+
+.wc-navigation {
+  border-bottom: 0.2rem solid var(--color-black-light);
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+  }
+
+  .items {
+    display: flex;
+    gap: 8.4rem;
+  }
+
+  .item {
+    position: relative;
+  }
+
+  .link:hover {
+    opacity: 0.6;
+  }
+
+  .link.active {
+    color: var(--color-green);
+  }
+
+  .item:not(:last-child):before {
+    content: "";
+    display: block;
+    position: absolute;
+    right: -4.2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 999px;
+    background-color: var(--color-white);
+  }
+}

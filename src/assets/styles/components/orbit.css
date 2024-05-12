@@ -1,0 +1,95 @@
+/*
+============= COMPONENT STYLES ==================================
+*/
+.wc-orbit {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  position: relative;
+  margin: 0 auto;
+  border: 2px solid #333;
+}
+
+@media (max-width: 400px) {
+  .wc-orbit {
+    width: 350px;
+    height: 350px;
+  }
+}
+
+.center {
+  background-color: var(--color-green);
+  height: 30px;
+  width: 30px;
+  border-radius: 100%;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background-size: cover;
+  animation: orbit 18s linear infinite;
+  padding: 8px;
+  border-radius: 100%;
+  background-color: var(--color-black-light);
+}
+
+@media (max-width: 450px) {
+  .icon {
+    animation: orbit-mobile 18s linear infinite;
+  }
+}
+
+.icon:hover {
+  cursor: pointer;
+  box-shadow: 0 0 0 1px var(--color-white);
+}
+
+.icon.next {
+  animation-delay: -3s;
+}
+
+.icon.astro {
+  animation-delay: -6s;
+}
+
+.icon.typescript {
+  animation-delay: -9s;
+}
+
+.icon.react {
+  animation-delay: -12s;
+}
+
+.icon.node {
+  animation-delay: -15s;
+}
+
+.icon.aws {
+  animation-delay: -18s;
+}
+
+@keyframes orbit {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg) translateX(200px) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg) translateX(200px) rotate(-360deg);
+  }
+}
+
+@keyframes orbit-mobile {
+  0% {
+    transform: translate(-50%, -50%) rotate(0deg) translateX(180px) rotate(0deg);
+  }
+  100% {
+    transform: translate(-50%, -50%) rotate(360deg) translateX(180px) rotate(-360deg);
+  }
+}
