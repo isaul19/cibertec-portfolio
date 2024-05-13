@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 export const Navigation = () => {
   const routes = [
@@ -20,7 +20,7 @@ export const Navigation = () => {
     },
   ];
 
-  const currentPath = window.location.pathname;
+  const { pathname: currentPath } = useLocation();
 
   return (
     <header className="wc-navigation container">
