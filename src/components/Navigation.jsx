@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export const Navigation = () => {
   const routes = [
     {
@@ -29,9 +31,9 @@ export const Navigation = () => {
         <ul className="items">
           {routes.map(({ text, href }) => (
             <li className="item" key={href}>
-              <a className={`link h6 ${href === currentPath ? "active" : ""}`} href={href}>
+              <Link className={`link h6 ${href === currentPath ? "active" : ""}`} to={href}>
                 {text}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>
